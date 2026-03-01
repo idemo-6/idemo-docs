@@ -1,0 +1,13 @@
+(
+  @(
+    ctx: crm.user
+  )
+
+  => >(
+    result :: imp.apply_user($ctx(crm.user))!;
+  ) #implement!
+
+  => _(
+    learn(result)!;
+  ) #evaluate!
+)

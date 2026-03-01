@@ -1,0 +1,4 @@
+strict_phase_policy: true
+enforce_effects_only_in_pt: true
+result_domain: [-1, 0, 1]
+rollback_semantics: compensation_forward

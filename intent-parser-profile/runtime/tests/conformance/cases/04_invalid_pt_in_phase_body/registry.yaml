@@ -1,0 +1,6 @@
+contexts_allowed: [crm.user]
+operators:
+  fetch_ctx:
+    kind: pt
+    phases_allowed: [pt_hook]
+functions: {}

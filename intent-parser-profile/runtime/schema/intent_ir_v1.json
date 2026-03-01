@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "intent_ir_v1.json",
+  "title": "IntentFlow NormalizedIntentIR v1",
+  "type": "object",
+  "required": ["version", "collect", "flow", "policies"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "collect": {
+      "type": "object",
+      "required": ["contexts"],
+      "properties": {
+        "contexts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z0-9_]*(\\.[A-Za-z_][A-Za-z0-9_]*)*$"
+          }
+        },
+        "io": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        },
+        "env": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          },
+          "default": {}
+        },
+        "attest": {
+          "type": "object",
+          "properties": {
+            "context_hash": { "type": "string" },
+            "decision_ref": { "type": "string" },
+            "decision_hash": { "type": "string" },
+            "policy_hash": { "type": "string" },
+            "analysis_hash": { "type": "string" },
+            "forecast_hash": { "type": "string" },
+            "approvals": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["key", "result"],
+                "properties": {
+                  "key": { "type": "string" },
+                  "result": { "type": "boolean" },
+                  "id": { "type": "string" },
+                  "at": { "type": "string" }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "collect_plan_stmts": {
+          "type": "array",
+          "description": "Normalized fn.* statements authored only in @(...).collect.",
+          "items": {
+            "type": "object",
+            "required": ["binding", "fn_name", "args"],
+            "properties": {
+              "binding": { "type": "string" },
+              "fn_name": { "type": "string", "pattern": "^plan_" },
+              "args": { "type": "array", "items": { "type": "string" } }
+            },
+            "additionalProperties": false
+          },
+          "default": []
+        }
+      },
+      "additionalProperties": false
+    },
+    "flow": {
+      "type": "array",
+      "description": "Ordered runtime steps after collect. May be empty for collect-only intents.",
+      "items": {
+        "type": "object",
+        "required": ["phase", "body", "suffix"],
+        "properties": {
+          "phase": {
+            "type": "string",
+            "enum": ["analyze", "forecast", "decide", "implement", "evaluate"]
+          },
+          "pt_hook": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["op", "args"],
+              "properties": {
+                "binding": { "type": "string" },
+                "op": { "type": "string" },
+                "args": { "type": "array", "items": { "type": "string" } },
+                "bang": { "type": "boolean", "default": false }
+              },
+              "additionalProperties": false
+            },
+            "default": []
+          },
+          "body": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "transition": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": []
+          },
+          "suffix": {
+            "type": "string",
+            "enum": ["!", "!!"]
+          }
+        },
+        "additionalProperties": false
+      },
+      "default": []
+    },
+    "policies": {
+      "type": "object",
+      "required": ["strict_phase_policy", "enforce_effects_only_in_pt", "result_domain"],
+      "properties": {
+        "strict_phase_policy": { "type": "boolean" },
+        "enforce_effects_only_in_pt": { "type": "boolean" },
+        "normalize_missing_suffix_to_bang": { "type": "boolean", "default": true },
+        "rollback_semantics": {
+          "type": "string",
+          "enum": ["compensation_forward"],
+          "default": "compensation_forward"
+        },
+        "result_domain": {
+          "type": "array",
+          "items": { "type": "integer", "enum": [-1, 0, 1] },
+          "default": [-1, 0, 1],
+          "description": "0 means non-applicability to current context; uncertainty is a subset of 0."
+        }
+      },
+      "additionalProperties": false
+    },
+    "fror_metrics": {
+      "type": "object",
+      "properties": {
+        "step_cost": { "type": "number", "minimum": 0 },
+        "tau_acc": { "type": "number", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "fror_zero_class": {
+      "type": "string",
+      "enum": ["none", "no_cost_transition"],
+      "default": "none",
+      "description": "Analytical FROR zero-class marker. Must not be mapped to CDM Result=0."
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,6 @@
+contexts_allowed: [crm.user]
+operators: {}
+functions:
+  plan_fetch:
+    kind: fn
+    phases_allowed: [collect]

@@ -1,0 +1,22 @@
+(
+  @(
+    ctx: io.user
+    ctx: crm.user
+    io: kafka
+
+    collect:
+      plan_user :: fn.plan_fetch($ctx(crm.user));
+  )
+
+  => [ data :: pt.fetch(plan_user)! ] ??(
+    analysis :: fn.analyze(data);
+  ) #analyze!
+
+  => >(
+    result :: imp.apply_user(data)!;
+  ) #implement!
+
+  => _(
+    learn(result)!;
+  ) #evaluate!
+)

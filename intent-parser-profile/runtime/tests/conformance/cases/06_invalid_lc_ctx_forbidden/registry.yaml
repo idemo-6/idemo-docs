@@ -1,0 +1,12 @@
+contexts_allowed: [crm.user]
+operators:
+  fetch:
+    kind: pt
+    phases_allowed: [pt_hook]
+functions:
+  plan_fetch:
+    kind: fn
+    phases_allowed: [collect]
+  analyze:
+    kind: fn
+    phases_allowed: [analyze]

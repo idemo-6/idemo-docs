@@ -1,0 +1,9 @@
+(
+  @(
+    ctx: crm.user
+  )
+
+  => ??(
+    plan_user :: fn.plan_fetch($ctx(crm.user));
+  ) #analyze!
+)

@@ -1,0 +1,7 @@
+lc_name: default
+lc_phase: develop
+allow:
+  contexts_declared: [crm.user]
+  contexts_used: [crm.user]
+  operators: []
+  functions: [plan_fetch]

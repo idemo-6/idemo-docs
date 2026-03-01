@@ -1,0 +1,18 @@
+contexts_allowed: [io.user, crm.user]
+operators:
+  fetch:
+    kind: pt
+    phases_allowed: [pt_hook]
+  learn:
+    kind: pt
+    phases_allowed: [pt_hook, evaluate]
+  apply_user:
+    kind: imp
+    phases_allowed: [implement]
+functions:
+  plan_fetch:
+    kind: fn
+    phases_allowed: [collect]
+  analyze:
+    kind: fn
+    phases_allowed: [analyze]

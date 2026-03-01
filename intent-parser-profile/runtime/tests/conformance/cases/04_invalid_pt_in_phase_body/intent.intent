@@ -1,0 +1,9 @@
+(
+  @(
+    ctx: crm.user
+  )
+
+  => ??(
+    data :: pt.fetch_ctx($ctx(crm.user))!;
+  ) #analyze!
+)

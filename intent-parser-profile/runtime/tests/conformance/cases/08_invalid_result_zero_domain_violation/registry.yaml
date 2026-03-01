@@ -1,0 +1,3 @@
+contexts_allowed: [crm.user]
+operators: {}
+functions: {}

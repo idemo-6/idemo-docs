@@ -1,0 +1,9 @@
+contexts_allowed: [crm.user]
+operators:
+  apply_user:
+    kind: imp
+    phases_allowed: [implement]
+  learn:
+    kind: pt
+    phases_allowed: [evaluate, pt_hook]
+functions: {}

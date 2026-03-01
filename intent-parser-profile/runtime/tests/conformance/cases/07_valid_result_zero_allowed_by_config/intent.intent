@@ -1,0 +1,9 @@
+(
+  @(
+    ctx: crm.user
+  )
+
+  => _(
+    guard(+1 == 0)!;
+  ) #evaluate!
+)

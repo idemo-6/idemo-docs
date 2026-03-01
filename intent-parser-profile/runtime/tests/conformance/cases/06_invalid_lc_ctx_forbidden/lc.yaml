@@ -1,0 +1,7 @@
+lc_name: restricted
+lc_phase: develop
+allow:
+  contexts_declared: [crm.user]
+  contexts_used: []
+  operators: [fetch]
+  functions: [plan_fetch, analyze]

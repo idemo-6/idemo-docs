@@ -1,0 +1,12 @@
+(
+  @(
+    ctx: crm.user
+
+    collect:
+      plan_user :: fn.plan_fetch($ctx(crm.user));
+  )
+
+  => [ data :: pt.fetch(plan_user)! ] ??(
+    analysis :: fn.analyze(data);
+  ) #analyze!
+)
