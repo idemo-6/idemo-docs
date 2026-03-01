@@ -26,7 +26,7 @@ Generate infrastructure artifacts from `infra DSL` without executing Docker:
 Mode alignment:
 1. In `dev`, generation and sandbox checks are allowed.
 2. In `prod`, this spec is execution-forbidden; only pre-approved stored artifacts may be consumed by orchestrators.
-3. See mode policy: [Spec 02](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/02_execution_modes_dev_prod.md).
+3. See mode policy: [[idemo-docs/materialization/sql/spec/02_execution_modes_dev_prod|Spec 02]].
 
 ## Input Contract (`infra DSL` v1)
 

@@ -14,7 +14,7 @@ Primary pipeline:
 4. `SQL template` (dialect-aware)
 
 Output contract:
-1. Result of simplified parsing MUST be a full DSL payload compatible with [Spec 04](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/04_crud_sql_spec.md).
+1. Result of simplified parsing MUST be a full DSL payload compatible with [[idemo-docs/materialization/sql/spec/04_crud_sql_spec|Spec 04]].
 2. Direct simplified-to-SQL without canonical CRUD DSL normalization is not allowed in `prod` flow.
 
 `prod` executes only approved artifacts (see Spec 02).
@@ -296,4 +296,4 @@ This section defines user-facing simple sugar aligned with ICSS intent semantics
 2. Base operation enum of v1 is unchanged.
 3. No direct simplified-to-SQL shortcut in prod is allowed.
 
-Reference: [Spec 08: ICSS -> SQL Mapping v1 Core](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/08_sql_icss_mapping_v1_core.md).
+Reference: [[idemo-docs/materialization/sql/spec/08_sql_icss_mapping_v1_core|Spec 08: ICSS -> SQL Mapping v1 Core]].

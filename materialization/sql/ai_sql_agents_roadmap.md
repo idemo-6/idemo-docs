@@ -111,14 +111,14 @@
 
 ## 7) Detailed Specs
 
-1. [Spec 00: DSL Format Policy](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/00_dsl_format_policy.md)
-2. [Spec 01: Infra Docker Generation](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/01_infra_docker_spec.md)
-3. [Spec 02: Execution Modes (dev/prod)](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/02_execution_modes_dev_prod.md)
-4. [Spec 03: Migrations (SQL-first)](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/03_migrations_sql_first_spec.md)
-5. [Spec 04: CRUD SQL (SQL-first)](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/04_crud_sql_spec.md)
-6. [Spec 05: Simplified DSL (v1)](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/05_simplified_dsl_spec.md)
-7. [Spec 06: SQL Executor Agent](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/06_sql_executor_spec.md)
-8. [Spec 07: SQL Agents Context Contract](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/07_sql_agents_context_contract.md)
+1. [[idemo-docs/materialization/sql/spec/00_dsl_format_policy|Spec 00: DSL Format Policy]]
+2. [[idemo-docs/materialization/sql/spec/01_infra_docker_spec|Spec 01: Infra Docker Generation]]
+3. [[idemo-docs/materialization/sql/spec/02_execution_modes_dev_prod|Spec 02: Execution Modes (dev/prod)]]
+4. [[idemo-docs/materialization/sql/spec/03_migrations_sql_first_spec|Spec 03: Migrations (SQL-first)]]
+5. [[idemo-docs/materialization/sql/spec/04_crud_sql_spec|Spec 04: CRUD SQL (SQL-first)]]
+6. [[idemo-docs/materialization/sql/spec/05_simplified_dsl_spec|Spec 05: Simplified DSL (v1)]]
+7. [[idemo-docs/materialization/sql/spec/06_sql_executor_spec|Spec 06: SQL Executor Agent]]
+8. [[idemo-docs/materialization/sql/spec/07_sql_agents_context_contract|Spec 07: SQL Agents Context Contract]]
 
 ## 8) TODO (Post-v1)
 

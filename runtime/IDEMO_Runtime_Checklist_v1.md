@@ -9,14 +9,14 @@
 
 - [[IDEMO_Runtime_Architecture_v1]]
 - [[IDEMO_Alignment_Matrix]]
-- [[FROR/FROR_CDL_bridge]]
-- [[intent_parser/README]]
+- [[fcdm-core/theory/cdm/bridge/FROR_CDM_bridge]]
+- [[idemo-docs/intent-authoring/README]]
 
 ## A. Канон и спецификации
 
 1. Актуальная версия `Intent`-канона зафиксирована для релиза.
-2. Версия `intent_parser/spec_unified_v1.md` зафиксирована и тегирована.
-3. Схема `intent_ir_v1.json` синхронизирована со spec.
+2. Версия `idemo-machine/docs/parser/spec_unified_v1.md` зафиксирована и тегирована.
+3. Схема `idemo-machine/schemas/intent_ir_v1.json` синхронизирована со spec.
 4. Governance-правила Canon <-> DSL проверены для текущих изменений.
 
 ## B. Фазовая дисциплина CF6

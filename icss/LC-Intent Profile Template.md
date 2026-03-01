@@ -1,9 +1,9 @@
-LC-Intent Profile Template v0.1.0
+# LC-Intent Profile Template v0.1.0
 
 Purpose
 - Fill this template to define a phase-aware LC policy profile consistent with:
-  - `/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/LC-Intent SPEC.md`
-  - `/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/CDM/Specifications/LifeCycle-6_v2.md`
+  - `[[idemo-docs/icss/LC-Intent SPEC]]`
+  - `[[fcdm-core/theory/cdm/Specifications/LifeCycle-6_v2]]`
 
 Use rules
 - Keep canonical storage/validation semantics (`F1..F6`).
@@ -19,9 +19,9 @@ profile:
   owner: "<team_or_role>"
   status: "draft|candidate|stable"
   canonical_refs:
-    lc: "/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/CDM/Specifications/LifeCycle-6_v2.md"
-    intent: "/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/CDM/Specifications/Intent-1.1.5.md"
-    cdl: "/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/CDM/Specifications/CDL/CDL-Canonical.md"
+    lc: "[[fcdm-core/theory/cdm/Specifications/LifeCycle-6_v2]]"
+    intent: "[[fcdm-core/theory/cdm/Specifications/Intent-1.1.5]]"
+    ctxl: "[[fcdm-core/theory/cdm/Specifications/CtxL/CtxL-Canonical]]"
 
 ----------------------------------------------------------------------
 B) DECLARED UNIVERSE (ROOT @)

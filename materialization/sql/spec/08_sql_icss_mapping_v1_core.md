@@ -90,7 +90,7 @@ Normalization rule:
 
 ## References
 
-1. [Spec 05: Simplified DSL](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/05_simplified_dsl_spec.md)
-2. [Spec 04: CRUD SQL](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/04_crud_sql_spec.md)
-3. [SQL PT @->?? Profile](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/README.md)
-4. [Intent parser unified spec](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/intent_parser/spec_unified_v1.md)
+1. [[idemo-docs/materialization/sql/spec/05_simplified_dsl_spec|Spec 05: Simplified DSL]]
+2. [[idemo-docs/materialization/sql/spec/04_crud_sql_spec|Spec 04: CRUD SQL]]
+3. [[idemo-docs/materialization/sql/README|SQL PT @->?? Profile]]
+4. [[idemo-machine/docs/parser/spec_unified_v1|Intent parser unified spec]]

@@ -27,9 +27,9 @@
 
 ## Интеграция с SQL-спеками
 
-- DSL и нормализация: [Spec 05: Simplified DSL](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/05_simplified_dsl_spec.md)
-- Исполнение артефактов: [Spec 06: SQL Executor Agent](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/06_sql_executor_spec.md)
-- Контекстный envelope: [Spec 07: SQL Agents Context Contract](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/07_sql_agents_context_contract.md)
+- DSL и нормализация: [[idemo-docs/materialization/sql/spec/05_simplified_dsl_spec|Spec 05: Simplified DSL]]
+- Исполнение артефактов: [[idemo-docs/materialization/sql/spec/06_sql_executor_spec|Spec 06: SQL Executor Agent]]
+- Контекстный envelope: [[idemo-docs/materialization/sql/spec/07_sql_agents_context_contract|Spec 07: SQL Agents Context Contract]]
 
 ## Политика `Result`/`transition_code` (CDM/FROR согласование)
 
@@ -73,4 +73,4 @@ Use `Natural First` by default:
 3. Use symbolic ICSS forms (`/(cond)`, `*`) only for advanced/explicit control semantics.
 
 Normative mapping details:
-- [Spec 08: ICSS -> SQL Mapping v1 Core](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/08_sql_icss_mapping_v1_core.md)
+- [[idemo-docs/materialization/sql/spec/08_sql_icss_mapping_v1_core|Spec 08: ICSS -> SQL Mapping v1 Core]]

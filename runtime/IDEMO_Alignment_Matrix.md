@@ -5,37 +5,37 @@
 Единый контрольный слой синхронизации:
 - канона Intent (CDM),
 - исполнимой формализации ICSS/IntentFlow (`intent_parser`),
-- онтологических инвариантов FROR/CDL.
+- онтологических инвариантов FROR/CDM.
 
 ## Источники канона
 
-- [[CDM/Specifications/Intent-1.1.5]]
-- [[CDM/Specifications/Operators/ChangeOperators-Canonical]]
-- [[CDM/Specifications/Operators/ChangeOperators-Access-Profile]]
-- [[CDM/Specifications/Operators/TIL-Implementation-Profile]]
-- [[CDM/Specifications/Operators/TIL-Lifecycle-Profile]]
-- [[CDM/Specifications/Operators/Operator-Novelty-Constraint-Profile]]
-- [[CDM/Specifications/ChangeFlow-6_v3]]
-- [[CDM/Specifications/CDL/CDL-Canonical]]
-- [[FROR/FROR_CDL_bridge]]
+- [[fcdm-core/theory/cdm/Specifications/Intent-1.1.5]]
+- [[fcdm-core/theory/cdm/Specifications/Operators/ChangeOperators-Canonical]]
+- [[fcdm-core/theory/cdm/Specifications/Operators/ChangeOperators-Access-Profile]]
+- [[fcdm-core/theory/cdm/Specifications/Operators/TIL-Implementation-Profile]]
+- [[fcdm-core/theory/cdm/Specifications/Operators/TIL-Lifecycle-Profile]]
+- [[fcdm-core/theory/cdm/Specifications/Operators/Operator-Novelty-Constraint-Profile]]
+- [[fcdm-core/theory/cdm/Specifications/ChangeFlow-6_v3]]
+- [[fcdm-core/theory/cdm/Specifications/CtxL/CtxL-Canonical]]
+- [[fcdm-core/theory/cdm/bridge/FROR_CDM_bridge]]
 - [[IDEMO_Runtime_Architecture_v1]]
 - [[IDEMO_Runtime_Checklist_v1]]
-- [[CDM/Specifications/System/System-Canonical]]
-- [[CDM/Specifications/System/Identity-Canonical]]
-- [[CDM/Specifications/System/Identity-Scoring-Profile]]
-- [[CDM/Specifications/System/System-Classification-Profile]]
-- [[CDM/Specifications/AppliedRules/RLC-CC-Profile]]
-- [[CDM/Specifications/AppliedRules/ROS-Profile]]
-- [[CDM/Specifications/AppliedRules/SEC-OC-Profile]]
-- [[CDM/Specifications/AppliedRules/Observer-Profile]]
-- [[dsls/sql/README]]
-- [[dsls/sql/spec/08_sql_icss_mapping_v1_core]]
+- [[fcdm-core/theory/cdm/Specifications/System/System-Canonical]]
+- [[fcdm-core/theory/cdm/Specifications/System/Identity-Canonical]]
+- [[fcdm-core/theory/cdm/Specifications/System/Identity-Scoring-Profile]]
+- [[fcdm-core/theory/cdm/Specifications/System/System-Classification-Profile]]
+- [[fcdm-core/theory/cdm/Specifications/AppliedRules/RLC-CC-Profile]]
+- [[fcdm-core/theory/cdm/Specifications/AppliedRules/ROS-Profile]]
+- [[fcdm-core/theory/cdm/Specifications/AppliedRules/SEC-OC-Profile]]
+- [[fcdm-core/theory/cdm/Specifications/AppliedRules/Observer-Profile]]
+- [[idemo-docs/materialization/sql/README]]
+- [[idemo-docs/materialization/sql/spec/08_sql_icss_mapping_v1_core]]
 
 ## Матрица соответствий
 
-| Канонический элемент | Intent-канон (CDM) | ICSS / runtime (`intent_parser`) | FROR/CDL bridge | Конформанс-критерий |
+| Канонический элемент | Intent-канон (CDM) | ICSS / runtime (`intent_parser`) | FROR/CDM bridge | Конформанс-критерий |
 |---|---|---|---|---|
-| Intent как первичная единица | Intent задает `what`, без `how` | Root intent + collect-first grammar | CDL = операционный слой, не замена инвариантов | В phase-body нет hardcoded реализационной семантики Intent |
+| Intent как первичная единица | Intent задает `what`, без `how` | Root intent + collect-first grammar | CDM = канонический операционный слой, не замена инвариантов | В phase-body нет hardcoded реализационной семантики Intent |
 | Контекстуальность Intent | `Intent` определен только относительно `C_active` | `ctx` declaration в `@(...)`, `$ctx(...)` в use | Один активный контекст на ветку | Ошибка на materialized context вне declared/LC allowed |
 | Тринарность результата | `Experience in {+1,0,-1}`, `0 <=> ApplicabilityFailure` | `Result/Experience` и `result_lit` поддерживаются | `{-,0,+}` сохраняется, но `0` разделяется: `0_structural -> Result=0`, `0_no_cost -> fror_zero_class` | Runtime не смешивает неприменимость и no-cost переход |
 | Морфология ChangeFlow | `CF1..CF6`, CF5 как commit | Фазовый pipeline `analyze..evaluate` + hooks | `CF5` как необратимая точка commit | Нет state mutation вне `implement` |

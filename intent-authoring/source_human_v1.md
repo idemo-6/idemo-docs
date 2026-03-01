@@ -1,7 +1,7 @@
 # ICSS-IntentFlow — Human Source v1
 
 Этот документ описывает смысл языка для людей.
-Формальная версия для парсеров/валидаторов: `spec_unified_v1.md`.
+Формальная версия для парсеров/валидаторов: `idemo-machine/docs/parser/spec_unified_v1.md`.
 
 ## 1. Зачем нужен язык
 
@@ -98,18 +98,18 @@ LC — жесткий allowlist-фильтр.
 `source_human_v1.md` — человекочитаемый источник смысла (source-first).
 
 Норматив для компилятора/парсера:
-- `spec_unified_v1.md`
+- `idemo-machine/docs/parser/spec_unified_v1.md`
 
 Содержательный SQL-слой для ветки `@(...).collect -> [pt.*] -> ??(analyze)`:
-- [SQL PT @->?? Profile](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/README.md)
-- [Spec 08: ICSS -> SQL Mapping v1 Core](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/08_sql_icss_mapping_v1_core.md)
+- [[idemo-docs/materialization/sql/README|SQL PT @->?? Profile]]
+- [[idemo-docs/materialization/sql/spec/08_sql_icss_mapping_v1_core|Spec 08: ICSS -> SQL Mapping v1 Core]]
 
 ## 10. Синтаксис и примеры (legacy source + v1 адаптация)
 
-Ниже перенесен синтаксический материал из `legacy/patch1.md` для людей и обсуждений.
-Для строгой машинной проверки используйте нормативный файл `spec_unified_v1.md`.
+Ниже перенесен синтаксический материал из `idemo-machine/docs/parser/legacy/patch1.md` для людей и обсуждений.
+Для строгой машинной проверки используйте нормативный файл `idemo-machine/docs/parser/spec_unified_v1.md`.
 
-### 10.1 Grammar patch (как в `legacy/patch1.md`)
+### 10.1 Grammar patch (как в `idemo-machine/docs/parser/legacy/patch1.md`)
 
 ```ebnf
 collect_item += collect_decl ;
@@ -138,7 +138,7 @@ $ctx(ecom.cart)
 - `fn.plan_remove(...)`
 - `fn.plan_empty()`
 
-### 10.2 Семантические правила (из `legacy/patch1.md`, кратко)
+### 10.2 Семантические правила (из `idemo-machine/docs/parser/legacy/patch1.md`, кратко)
 
 1. `ctx` объявляются только в `@(...)`.
 2. Планирование (`fn.plan_*`) делается только в `@(...).collect`.
@@ -148,7 +148,7 @@ $ctx(ecom.cart)
 6. При нарушении: `E_CTX_USED_BUT_NOT_DECLARED`.
 7. LC ограничивает и declared, и used/materialized контексты; для нарушений используем `E_LC_CTX_FORBIDDEN`.
 
-### 10.3 Канонические примеры (перенос из `legacy/patch1.md`)
+### 10.3 Канонические примеры (перенос из `idemo-machine/docs/parser/legacy/patch1.md`)
 
 #### D1) VALID (v1): single @(...), plans in @.collect, materialize in PT
 
@@ -244,7 +244,7 @@ ERROR: E_CTX_USED_BUT_NOT_DECLARED: ecom.cart is referenced in FetchPlan but not
 ERROR: E_CTX_DECLARATION_OUTSIDE_COLLECT: ctx declarations are only allowed in @(...)
 ```
 
-### 10.4 Нормализация (delta из `legacy/patch1.md`)
+### 10.4 Нормализация (delta из `idemo-machine/docs/parser/legacy/patch1.md`)
 
 - Нормализовать ctx-ссылки к форме `$ctx(<ctx_key>)`.
 - Нормализовать fetch-запросы к `pt.fetch(plan)!`; прямой fetch по контексту: `pt.fetch_ctx($ctx(x))!`.

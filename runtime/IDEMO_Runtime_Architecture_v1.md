@@ -12,9 +12,9 @@
 
 - [[IDEMO_Alignment_Matrix]]
 - [[IDEMO_Runtime_Checklist_v1]]
-- [[CDM/Specifications/Intent-1.1.5]]
-- [[FROR/FROR_CDL_bridge]]
-- [[intent_parser/README]]
+- [[fcdm-core/theory/cdm/Specifications/Intent-1.1.5]]
+- [[fcdm-core/theory/cdm/bridge/FROR_CDM_bridge]]
+- [[idemo-docs/intent-authoring/README]]
 
 ## 1. Базовый runtime-паттерн
 
@@ -93,7 +93,7 @@ AiOrcAgent:
 ## 5. Operational contract (минимум)
 
 1. LLM возвращает phase-local артефакты.
-2. AiOrcAgent валидирует их против LC/CDL/policy.
+2. AiOrcAgent валидирует их против LC/CtxL/policy.
 3. Композиция выполняется по CF-порядку.
 4. После implement накапливается операционная стоимость.
 5. evaluate записывает класс результата и обновляет опыт.

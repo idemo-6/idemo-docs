@@ -92,6 +92,6 @@
 
 ## Куда смотреть дальше
 
-1. [Spec 05: Simplified DSL](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/05_simplified_dsl_spec.md)
-2. [Spec 08: ICSS -> SQL Mapping v1 Core](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/spec/08_sql_icss_mapping_v1_core.md)
-3. [SQL PT @->?? Profile](/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/dsls/sql/README.md)
+1. [[idemo-docs/materialization/sql/spec/05_simplified_dsl_spec|Spec 05: Simplified DSL]]
+2. [[idemo-docs/materialization/sql/spec/08_sql_icss_mapping_v1_core|Spec 08: ICSS -> SQL Mapping v1 Core]]
+3. [[idemo-docs/materialization/sql/README|SQL PT @->?? Profile]]

@@ -1,4 +1,4 @@
-LC-Intent SPEC v0.1.1 (MINIMAL, FORMAL)
+# LC-Intent SPEC v0.1.1 (MINIMAL, FORMAL)
 
 GOAL
 Describe an LC system as:
@@ -8,11 +8,11 @@ Describe an LC system as:
 
 STATUS / NORMATIVE BOUNDARY
 - Status: profile (domain policy layer), not canonical replacement.
-- Canonical LC source: `/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/CDM/Specifications/LifeCycle-6_v2.md`
-- Canonical Intent source: `/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/CDM/Specifications/Intent-1.1.5.md`
-- Canonical CDL source: `/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/CDM/Specifications/CDL/CDL-Canonical.md`
+- Canonical LC source: `[[fcdm-core/theory/cdm/Specifications/LifeCycle-6_v2]]`
+- Canonical Intent source: `[[fcdm-core/theory/cdm/Specifications/Intent-1.1.5]]`
+- Canonical CtxL source: `[[fcdm-core/theory/cdm/Specifications/CtxL/CtxL-Canonical]]`
 - This document specifies implementation policy over canonical constraints.
-- Companion template for authoring profiles: `/Volumes/WORK/Project/idemo_docs/IDEMO.DOCS/LC-Intent Profile Template.md`
+- Companion template for authoring profiles: `[[idemo-docs/icss/LC-Intent Profile Template]]`
 
 CANONICAL PHASE MAPPING
 - `+`  (birth)   -> `F1`
