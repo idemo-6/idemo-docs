@@ -9,27 +9,27 @@
 
 ## Источники канона
 
-- [[fcdm-core/theory/cdm/Specifications/Intent-1.1.5]]
-- [[fcdm-core/theory/cdm/Specifications/Operators/ChangeOperators-Canonical]]
-- [[fcdm-core/theory/cdm/Specifications/Operators/ChangeOperators-Access-Profile]]
-- [[fcdm-core/theory/cdm/Specifications/Operators/TIL-Implementation-Profile]]
-- [[fcdm-core/theory/cdm/Specifications/Operators/TIL-Lifecycle-Profile]]
-- [[fcdm-core/theory/cdm/Specifications/Operators/Operator-Novelty-Constraint-Profile]]
-- [[fcdm-core/theory/cdm/Specifications/ChangeFlow-6_v3]]
-- [[fcdm-core/theory/cdm/Specifications/CtxL/CtxL-Canonical]]
-- [[fcdm-core/theory/cdm/bridge/FROR_CDM_bridge]]
-- [[IDEMO_Runtime_Architecture_v1]]
-- [[IDEMO_Runtime_Checklist_v1]]
-- [[fcdm-core/theory/cdm/Specifications/System/System-Canonical]]
-- [[fcdm-core/theory/cdm/Specifications/System/Identity-Canonical]]
-- [[fcdm-core/theory/cdm/Specifications/System/Identity-Scoring-Profile]]
-- [[fcdm-core/theory/cdm/Specifications/System/System-Classification-Profile]]
-- [[fcdm-core/theory/cdm/Specifications/AppliedRules/RLC-CC-Profile]]
-- [[fcdm-core/theory/cdm/Specifications/AppliedRules/ROS-Profile]]
-- [[fcdm-core/theory/cdm/Specifications/AppliedRules/SEC-OC-Profile]]
-- [[fcdm-core/theory/cdm/Specifications/AppliedRules/Observer-Profile]]
-- [[idemo-docs/materialization/sql/README]]
-- [[idemo-docs/materialization/sql/spec/08_sql_icss_mapping_v1_core]]
+- [Intent-1.1.5](../../fcdm-core/theory/cdm/Specifications/Intent-1.1.5.md)
+- [ChangeOperators-Canonical](../../fcdm-core/theory/cdm/Specifications/Operators/ChangeOperators-Canonical.md)
+- [ChangeOperators-Access-Profile](../../fcdm-core/theory/cdm/Specifications/Operators/ChangeOperators-Access-Profile.md)
+- [TIL-Implementation-Profile](../../fcdm-core/theory/cdm/Specifications/Operators/TIL-Implementation-Profile.md)
+- [TIL-Lifecycle-Profile](../../fcdm-core/theory/cdm/Specifications/Operators/TIL-Lifecycle-Profile.md)
+- [Operator-Novelty-Constraint-Profile](../../fcdm-core/theory/cdm/Specifications/Operators/Operator-Novelty-Constraint-Profile.md)
+- [ChangeFlow-6_v3](../../fcdm-core/theory/cdm/Specifications/ChangeFlow-6_v3.md)
+- [CtxL-Canonical](../../fcdm-core/theory/cdm/Specifications/CtxL/CtxL-Canonical.md)
+- [FROR_CDM_bridge](../../fcdm-core/theory/cdm/bridge/FROR_CDM_bridge.md)
+- [IDEMO_Runtime_Architecture_v1](./IDEMO_Runtime_Architecture_v1.md)
+- [IDEMO_Runtime_Checklist_v1](./IDEMO_Runtime_Checklist_v1.md)
+- [System-Canonical](../../fcdm-core/theory/cdm/Specifications/System/System-Canonical.md)
+- [Identity-Canonical](../../fcdm-core/theory/cdm/Specifications/System/Identity-Canonical.md)
+- [Identity-Scoring-Profile](../../fcdm-core/theory/cdm/Specifications/System/Identity-Scoring-Profile.md)
+- [System-Classification-Profile](../../fcdm-core/theory/cdm/Specifications/System/System-Classification-Profile.md)
+- [RLC-CC-Profile](../../fcdm-core/theory/cdm/Specifications/AppliedRules/RLC-CC-Profile.md)
+- [ROS-Profile](../../fcdm-core/theory/cdm/Specifications/AppliedRules/ROS-Profile.md)
+- [SEC-OC-Profile](../../fcdm-core/theory/cdm/Specifications/AppliedRules/SEC-OC-Profile.md)
+- [Observer-Profile](../../fcdm-core/theory/cdm/Specifications/AppliedRules/Observer-Profile.md)
+- [SQL PT @->?? Profile](../materialization/sql/README.md)
+- [Spec 08: ICSS -> SQL Mapping v1 Core](../materialization/sql/spec/08_sql_icss_mapping_v1_core.md)
 
 ## Матрица соответствий
 

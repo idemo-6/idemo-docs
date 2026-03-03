@@ -7,10 +7,10 @@
 
 ## Связанные документы
 
-- [[IDEMO_Runtime_Architecture_v1]]
-- [[IDEMO_Alignment_Matrix]]
-- [[fcdm-core/theory/cdm/bridge/FROR_CDM_bridge]]
-- [[idemo-docs/intent-authoring/README]]
+- [IDEMO_Runtime_Architecture_v1](./IDEMO_Runtime_Architecture_v1.md)
+- [IDEMO_Alignment_Matrix](./IDEMO_Alignment_Matrix.md)
+- [FROR_CDM_bridge](../../fcdm-core/theory/cdm/bridge/FROR_CDM_bridge.md)
+- [Intent Authoring Guide](../intent-authoring/README.md)
 
 ## A. Канон и спецификации
 
@@ -72,4 +72,3 @@ No-Go, если:
 - обнаружены обходы commit-boundary;
 - отсутствует трассировка цены или evaluate-closure;
 - rollback реализован как скрытая инверсия без компенсационного следа.
-

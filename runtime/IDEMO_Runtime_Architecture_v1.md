@@ -10,11 +10,11 @@
 
 ## Связанные документы
 
-- [[IDEMO_Alignment_Matrix]]
-- [[IDEMO_Runtime_Checklist_v1]]
-- [[fcdm-core/theory/cdm/Specifications/Intent-1.1.5]]
-- [[fcdm-core/theory/cdm/bridge/FROR_CDM_bridge]]
-- [[idemo-docs/intent-authoring/README]]
+- [IDEMO_Alignment_Matrix](./IDEMO_Alignment_Matrix.md)
+- [IDEMO_Runtime_Checklist_v1](./IDEMO_Runtime_Checklist_v1.md)
+- [Intent-1.1.5](../../fcdm-core/theory/cdm/Specifications/Intent-1.1.5.md)
+- [FROR_CDM_bridge](../../fcdm-core/theory/cdm/bridge/FROR_CDM_bridge.md)
+- [Intent Authoring Guide](../intent-authoring/README.md)
 
 ## 1. Базовый runtime-паттерн
 

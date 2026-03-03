@@ -18,14 +18,14 @@
 
 ## Основной документ
 
-- [[idemo-docs/intent-authoring/source_human_v1|ICSS-IntentFlow — Human Source v1]]
+- [ICSS-IntentFlow — Human Source v1](./source_human_v1.md)
 
 ## Смежные профили
 
-- [[idemo-docs/materialization/sql/README|SQL PT @->?? Profile]]
+- [SQL PT @->?? Profile](../materialization/sql/README.md)
 
 ## Канон CDM
 
-- [[fcdm-core/theory/cdm/Specifications/Intent-1.1.5|Intent]]
-- [[fcdm-core/theory/cdm/Specifications/ChangeFlow-6_v3|ChangeFlow-6]]
-- [[fcdm-core/theory/cdm/Specifications/Context/Context-Canonical|Context Canonical]]
+- [Intent](../../fcdm-core/theory/cdm/Specifications/Intent-1.1.5.md)
+- [ChangeFlow-6](../../fcdm-core/theory/cdm/Specifications/ChangeFlow-6_v3.md)
+- [Context Canonical](../../fcdm-core/theory/cdm/Specifications/Context/Context-Canonical.md)
