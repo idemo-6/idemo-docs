@@ -12,6 +12,10 @@
 
 - [IDEMO_Alignment_Matrix](./IDEMO_Alignment_Matrix.md)
 - [IDEMO_Runtime_Checklist_v1](./IDEMO_Runtime_Checklist_v1.md)
+- [IDEMO_Context_Schema_Draft_v0_1](./IDEMO_Context_Schema_Draft_v0_1.md)
+- [IDEMO_Context_Schema_Draft_v0_2](./IDEMO_Context_Schema_Draft_v0_2.md)
+- [Post-Anthropocentric Computing Manifesto (vision)](../vision/Post-Anthropocentric_Computing_Manifesto.md)
+- [Manifesto to Runtime Mapping](../vision/Manifesto_to_Runtime_Mapping.md)
 - [Intent-1.1.5](../../fcdm-core/theory/cdm/Specifications/Intent-1.1.5.md)
 - [FROR_CDM_bridge](../../fcdm-core/theory/cdm/bridge/FROR_CDM_bridge.md)
 - [Intent Authoring Guide](../intent-authoring/README.md)
@@ -46,6 +50,7 @@ LLM генерирует небольшие целенаправленные ф�
 - без права нарушать фазовые ограничения.
 
 LLM не является владельцем commit-последствий.
+LLM не является владельцем source-of-truth системы.
 
 ### 2.2 AiOrcAgent (orchestration authority)
 
@@ -97,6 +102,7 @@ AiOrcAgent:
 3. Композиция выполняется по CF-порядку.
 4. После implement накапливается операционная стоимость.
 5. evaluate записывает класс результата и обновляет опыт.
+6. Source-of-truth поддерживается на уровне Intent/policy/experience, а не на уровне исполняемого кода.
 
 ## 6. Почему это не «просто очередной workflow»
 

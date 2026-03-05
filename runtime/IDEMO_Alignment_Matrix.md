@@ -20,6 +20,8 @@
 - [FROR_CDM_bridge](../../fcdm-core/theory/cdm/bridge/FROR_CDM_bridge.md)
 - [IDEMO_Runtime_Architecture_v1](./IDEMO_Runtime_Architecture_v1.md)
 - [IDEMO_Runtime_Checklist_v1](./IDEMO_Runtime_Checklist_v1.md)
+- [IDEMO_SystemMemory_and_Scope_Model](./IDEMO_SystemMemory_and_Scope_Model.md)
+- [Ephemeral_Implementation_Policy](./Ephemeral_Implementation_Policy.md)
 - [System-Canonical](../../fcdm-core/theory/cdm/Specifications/System/System-Canonical.md)
 - [Identity-Canonical](../../fcdm-core/theory/cdm/Specifications/System/Identity-Canonical.md)
 - [Identity-Scoring-Profile](../../fcdm-core/theory/cdm/Specifications/System/Identity-Scoring-Profile.md)
@@ -30,6 +32,9 @@
 - [Observer-Profile](../../fcdm-core/theory/cdm/Specifications/AppliedRules/Observer-Profile.md)
 - [SQL PT @->?? Profile](../materialization/sql/README.md)
 - [Spec 08: ICSS -> SQL Mapping v1 Core](../materialization/sql/spec/08_sql_icss_mapping_v1_core.md)
+- [SDL/SMVT Profile v1](../materialization/semantic/SDL_SMVT_Profile_v1.md)
+- [Post-Anthropocentric Computing Manifesto (vision)](../vision/Post-Anthropocentric_Computing_Manifesto.md)
+- [Manifesto to Runtime Mapping](../vision/Manifesto_to_Runtime_Mapping.md)
 
 ## Матрица соответствий
 
@@ -44,6 +49,12 @@
 | Накопленная цена (`τ`) | Подразумевается через необратимость/процесс | В IR явного `tau_acc` пока нет | `τ` как скаляр необратимости | Трасса должна поддерживать аккумулятор цены |
 | Структурный детерминизм | Один Intent -> допустимое `ΔS`, много траекторий | Deterministic grammar + policy-constrained execution | Онтологический, не алгоритмический детерминизм | Для одного Intent допустимы разные планы при одинаковом целевом классе эффекта |
 | Distributed realization | CF1-4/6 могут быть распределены, CF5 локален | PT hooks + authority constraints | Commit point локализован | Локальный authority-agent фиксируется в implement |
+| Intent-Context-Policy coupling | Intent применим только в активном контексте с допустимой policy | `ctx` declaration/use + LC/policy allowlists | `Result=0 <=> ApplicabilityFailure` сохраняется | Нет активного контекста/допуска -> `Result=0`; context-only без intent не запускает change |
+| Experience-policy coupling | Операционный опыт участвует в решениях через policy, а не как raw контекстные данные | `operation_experience_policy` + refs/query к `experienceMemory` | Сохраняется разделение: context conditions vs experience history | В контексте нет raw history; используется policy-filter + traceable references |
+| Isolation-by-scope | Изменение состояния связано с фазовой дисциплиной и commit-boundary | `current_flow_scope`, merge only in implement | rollback = compensation-forward, no silent overwrite | Нет глобальной мутации до commit; trace содержит `scope_id`, `commit_result`, `conflict_class` |
+| Semantic materialization access | Контекст определяет применимость и допустимость работы с данными | SDL/SMVT профиль + binding model (`smvt_mode` configurable) | Контекстная применимость + FROR/CDM safety constraints | Нет direct physical access из phase body; SMVT-проверки обязательны при `smvt_mode=required` |
+| Вторичность реализации (Ephemeral as secondary) | Intent/policy/experience первичны, реализация производна | Ephemeral Implementation Policy v1 (secondary, not necessarily transient) | Сохраняется primacy Intent и управляемая эволюция реализации | При конфликте приоритет у Intent/policy; код не трактуется как source-of-truth |
+| Граница Ephemeral vs Approval | Допуск к исполнению и онтологический статус реализации разведены | Ephemeral policy section 7 + runtime approval policies | Approval gate обязателен и не замещается lifecycle-политикой реализации | Нет обхода approval через ссылки на "вторичность" реализации |
 | SQL materialization profile | Для информационных систем materialization выносится в `pt @->??` | `collect` планирует (`fn.plan_*`), `pt` исполняет SQL artifact, `analyze` остается pure | `Result=0` только для ApplicabilityFailure, no-cost -> `fror_zero_class` | Нет SQL/DB вызовов в phase body; SQL no-op не маппится в `Result=0` |
 
 ## Текущий статус (по факту документов)

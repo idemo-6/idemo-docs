@@ -53,6 +53,7 @@
 2. LLM не имеет прямого права на state mutation.
 3. AiOrcAgent владеет композицией, маршрутизацией и policy-checks.
 4. Human override и authority boundaries документированы.
+5. Approval-gate и lifecycle-policy реализации (ephemeral) не смешиваются.
 
 ## G. Наблюдаемость и конформанс
 
@@ -60,7 +61,8 @@
 2. Есть тест-кейсы на `Result in {+1,0,-1}`.
 3. Есть тест на запрет mutation вне implement.
 4. Есть тест на компенсационный rollback.
-5. Метрики runtime (latency, failure class, tau/cost proxy) публикуются.
+5. В trace обязательны поля: `scope_id`, `commit_result`, `conflict_class`.
+6. Метрики runtime (latency, failure class, tau/cost proxy) публикуются.
 
 ## H. Go/No-Go
 
